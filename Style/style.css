@@ -1,6 +1,21 @@
+
+h1
+{
+    padding-bottom: 25px;
+}
+.img-accueil
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .alignementformulaires
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+main
+{
+    margin-bottom: 20px;
 }

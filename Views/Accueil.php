@@ -18,81 +18,88 @@
 include "../Includes/header.php";
 ?>
 <div class="container">
-    <h1 class="text-center"> Bienvenue dans le super Burger Quizz </h1>
-    <!-- image-->
+    <main id="maincontent" role="main" tabindex="-1">
+        <h1 class="text-center"> Bienvenue dans le super Burger Quizz </h1>
+        <!-- image-->
 
 
 
-    <!-- nom: name
-     prenom firstname
-     emaail : email
-     dnaissance: birth
-     nom utilisateur: username
-     mot de passe : password-->
-    <div class="row">
-        <div class="col-12 text-center">
-            <img src="../images/imageaccueil.jpg" alt="" class="img-fluid rounded" >
+        <!-- nom: name
+         prenom firstname
+         emaail : email
+         dnaissance: birth
+         nom utilisateur: username
+         mot de passe : password-->
+        <div class="row img-accueil">
+            <div class="col-12 text-center">
+                <img src="../images/imageaccueil.jpg" alt="" class="img-fluid rounded" >
+            </div>
         </div>
-    </div>
+        <p class="text-center fs-1"> Serez-vous le gagant de l'année? :D </p>
+        <p class="text-center fs-1">N'attendez plus...Jouez! </p>
+        <div class="alignementformulaires">
 
-    <div class="alignementformulaires">
 
+            <div class="formconnection">
+                <h2> Connectez-vous </h2>
+                <p> Les champs marqués par un "*" sont obligatiores.</p>
+                <form method="post" action="">
 
-        <div class="formconnection">
-            <h2> Connectez-vous </h2>
-            <form method="post" action="">
-
-                <p>
-                    <label for="nuserconnection"> Nom d'utilisateur: </label>
-                    <input type="text" name="username"  id="nuserconnection" required>
-                </p>
-                <p>
-                    <label for="mpasse">Mot de passe: </label>
-                    <input type="password" name="password"  id="mpasse" required>
-                </p>
-                <input type="submit"  value="Connexion">
-            </form>
+                    <p>
+                        <label for="nuserconnection" class="form-label"> Nom d'utilisateur <span aria-hidden="true">* </span> : </label>
+                        <input type="text" name="username"  id="nuserconnection" class="form-control" required>
+                    </p>
+                    <p>
+                        <label for="mpasse" class="form-label">Mot de passe <span aria-hidden="true">* </span>: </label>
+                        <input type="password" name="password"  class="form-control" id="mpasse" required>
+                    </p>
+                    <input type="submit"  value="Connexion">
+                </form>
             </div>
 
 
-<div class="formregister"> <h2> Inscrivez-vous</h2>
-    <form method="post" action="">
+            <div class="formregister"> <h2> Inscrivez-vous</h2>
+                <p> Les champs marqués par un "*" sont obligatiores.</p>
+                <form method="post" action="">
 
 
 
-        <p>
-            <label for="nom">Nom: </label>
-            <input type="text" name="name"  id="nom" required>
-        </p>
-        <p>
-            <label for="pnom">Prénom: </label>
-            <input type="text" name="firstname"  id="pnom" required>
-        </p>
+                    <p>
+                        <label for="nom" class="form-label">Nom<span aria-hidden="true">* </span>: </label>
+                        <input type="text" name="name"  class="form-control" id="nom" required>
+                    </p>
+                    <p>
+                        <label for="pnom" class="form-label">Prénom<span aria-hidden="true">* </span>: </label>
+                        <input type="text" name="firstname"  class="form-control" id="pnom" required>
+                    </p>
 
 
-        <p>
-            <label for="mail">E-mail: </label>
-            <input type="email" name="email"  id="mail" required>
-        </p>
-        <p>
-            <label for="nuserregister"> Nom d'utilisateur: </label>
-            <input type="text" name="username"  id="nuserregister" required>
-        </p>
-        <p>
-            <label for="mpasseregister">Mot de passe: </label>
-            <input type="password" name="password"  id="mpasseregister" required>
-        </p>
-        <p>
-            <label for="mpasserepeat">Confirmez votre mot de passe: </label>
-            <input type="password" name="password"  id="mpasserepeat" required>
-        </p>
-        <input type="submit"  value="S'inscrire">
-    </form>
-</div>
+                    <p>
+                        <label for="mail" class="form-label">E-mail <span aria-hidden="true">* </span>: </label>
+                        <input type="email" name="email"  class="form-control" id="mail" required>
+                    </p>
+                    <p>
+                        <label for="nuserregister"> Nom d'utilisateur <span aria-hidden="true">* </span>: </label>
+                        <input type="text" name="username" class="form-control"  id="nuserregister" required>
+                    </p>
+                    <p>
+                        <label for="mpasseregister" class="form-label" >Mot de passe <span aria-hidden="true">* </span>: </label>
+                        <input type="password" name="password"  class="form-control" id="mpasseregister" required>
+                    </p>
+                    <p>
+                        <label for="mpasserepeat" class="form-label">Confirmez votre mot de passe <span aria-hidden="true">* </span>: </label>
+                        <input type="password" name="password"  class="form-control" id="mpasserepeat" required>
+                    </p>
+                    <input type="submit"  value="S'inscrire">
+                </form>
+            </div>
 
 
 
-</div>
+        </div>
+
+
+    </main>
 
 
 
