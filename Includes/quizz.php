@@ -9,10 +9,10 @@ $compteur=0;
         echo "Maintenant vous devrez directement tapez la bonne réponse.\n";
         $compteur=+Question("Question 6: Quel est le prénom de l'héroïne de 'La rose de Versailles'?\n","oscar",$compteur);
         $compteur=+Question("Question 7: En quelle année s'est terminé le manga 'Dragon Ball' en chiffres?\n","1995",$compteur);
-        $compteur=+Question("Question 8: Quel est le nom de famille de Naruto?\n","uzumaki",$compteur);
-        $compteur=+Question("Question 9: Quel est le collectif derrière 'Sakura chasseuse de cartes'?\n","clamp",$compteur);
-        $compteur=+Question("Question 10: Quel est le métier des frères Elric?\n","alchimiste",$compteur);
-        echo "Vous avez trouvé ",$compteur," bonne réponses. Bravo!\n";
+$compteur=+Question("Question 8: Quel est le nom de famille de Naruto?\n","uzumaki",$compteur);
+$compteur=+Question("Question 9: Quel est le collectif derrière 'Sakura chasseuse de cartes'?\n","clamp",$compteur);
+$compteur=+Question("Question 10: Quel est le métier des frères Elric?\n","alchimiste",$compteur);
+echo "Vous avez trouvé ",$compteur," bonne réponses. Bravo!\n";
 
 function Question(string $_question, string $_bon, int $_compteur): int
 {
