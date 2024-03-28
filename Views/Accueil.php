@@ -60,7 +60,7 @@ include "../Includes/header.php";
 
             <div class="formregister"> <h2> Inscrivez-vous</h2>
                 <p> Les champs marqués par un "*" sont obligatiores.</p>
-                <form method="post" action="../Includes/back.php"">
+                <form method="post" action="../Includes/backInscription.php"">
 
                     <p>
                         <label for="nuserregister"> Nom d'utilisateur <span aria-hidden="true">* </span>: </label>

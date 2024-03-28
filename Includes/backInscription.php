@@ -16,8 +16,8 @@
 <?php
 // Établir une connexion à la base de données (utilisant MySQLi)
 $servername = "localhost";
-$username = "username";
-$password = "password";
+$username = "root";
+$password = "Tangodata!";
 $database = "database";
 
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -39,7 +39,7 @@ $password = mysqli_real_escape_string($conn, $password);
 $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
 // Insertion sql
-$sql = "INSERT INTO nom_table (username, password) VALUES ('$username', '$password_hashed')";
+$sql = "INSERT INTO Utilisateurs(username,password) VALUES ('$username','$password_hashed')";
 
 if (mysqli_query($conn, $sql)) {
     echo "Enregistrement effectué avec succès.";
