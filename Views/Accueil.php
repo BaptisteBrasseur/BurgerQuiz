@@ -43,7 +43,7 @@ include "../Includes/header.php";
             <div class="formconnection">
                 <h2> Connectez-vous </h2>
                 <p> Les champs marqués par un "*" sont obligatiores.</p>
-                <form method="post" action="">
+                <form method="post" action="../Includes/back.php">
 
                     <p>
                         <label for="nuserconnection" class="form-label"> Nom d'utilisateur <span aria-hidden="true">* </span> : </label>
@@ -60,24 +60,8 @@ include "../Includes/header.php";
 
             <div class="formregister"> <h2> Inscrivez-vous</h2>
                 <p> Les champs marqués par un "*" sont obligatiores.</p>
-                <form method="post" action="">
+                <form method="post" action="../Includes/back.php"">
 
-
-
-                    <p>
-                        <label for="nom" class="form-label">Nom<span aria-hidden="true">* </span>: </label>
-                        <input type="text" name="name"  class="form-control" id="nom" required>
-                    </p>
-                    <p>
-                        <label for="pnom" class="form-label">Prénom<span aria-hidden="true">* </span>: </label>
-                        <input type="text" name="firstname"  class="form-control" id="pnom" required>
-                    </p>
-
-
-                    <p>
-                        <label for="mail" class="form-label">E-mail <span aria-hidden="true">* </span>: </label>
-                        <input type="email" name="email"  class="form-control" id="mail" required>
-                    </p>
                     <p>
                         <label for="nuserregister"> Nom d'utilisateur <span aria-hidden="true">* </span>: </label>
                         <input type="text" name="username" class="form-control"  id="nuserregister" required>

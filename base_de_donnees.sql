@@ -11,7 +11,7 @@ CREATE TABLE Utilisateurs
     password varchar(30) NOT NULL,
     est_administrateur boolean NOT NULL DEFAULT 0
 );
-INSERT INTO Utilisateurs (username, password) values ('thomas_ardui', 'Jksijh87');
+INSERT INTO Utilisateurs (username, password,nom,prenom,email,est_administrateur) values ('thomas_ardui', 'Jksijh87',"Ardui","Thomas","thoArd@gmail.com",TRUE);
 CREATE TABLE Scores
 (
     id             int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
