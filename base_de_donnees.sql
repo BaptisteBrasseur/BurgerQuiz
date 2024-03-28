@@ -11,6 +11,7 @@ CREATE TABLE Utilisateurs
     password varchar(30) NOT NULL,
     est_administrateur boolean NOT NULL DEFAULT 0
 );
+INSERT INTO Utilisateurs (username, password) values ('thomas_ardui', 'Jksijh87');
 CREATE TABLE Scores
 (
     id             int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -21,7 +22,7 @@ CREATE TABLE Scores
 CREATE TABLE Questions_QCM
 (
     id int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    question varchar(50) NOT NULL,
+    question varchar(70) NOT NULL,
     bonne_reponse varchar(30) NOT NULL,
     mauvaise_reponse_1 varchar(30) NOT NULL,
     mauvaise_reponse_2 varchar(30) NOT NULL
@@ -34,7 +35,7 @@ insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise
 CREATE TABLE Questions_reponse_directe
 (
     id int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    question varchar(50) NOT NULL,
+    question varchar(70) NOT NULL,
     bonne_reponse varchar(30) NOT NULL
 );
 insert into Questions_reponse_directe (question, bonne_reponse) values ('Quel est le prénom de l héroïne de La rose de Versailles?', 'oscar');
