@@ -4,14 +4,11 @@ USE BurgerQuiz;
 CREATE TABLE Utilisateurs
 (
     id int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nom varchar(30) NOT NULL,
-    prenom varchar(30) NOT NULL,
-    email varchar(50) NOT NULL,
     username varchar(30) NOT NULL,
     password varchar(30) NOT NULL,
     est_administrateur boolean NOT NULL DEFAULT 0
 );
-INSERT INTO Utilisateurs (username, password,nom,prenom,email,est_administrateur) values ('thomas_ardui', 'Jksijh87',"Ardui","Thomas","thoArd@gmail.com",TRUE);
+INSERT INTO Utilisateurs (username, password,est_administrateur) values ('thomas_ardui', 'Jksijh87',1);
 CREATE TABLE Scores
 (
     id             int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
