@@ -3,6 +3,13 @@ h1
 {
     padding-bottom: 25px;
 }
+
+body
+{
+    min-height: 500px;
+}
+
+
 .img-accueil
 {
     margin-bottom: 10px;

@@ -5,10 +5,10 @@ CREATE TABLE Utilisateurs
 (
     id int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username varchar(30) NOT NULL,
-    password varchar(30) NOT NULL,
-    est_administrateur boolean NOT NULL DEFAULT 0
-);
-INSERT INTO Utilisateurs (username, password,est_administrateur) values ('thomas_ardui', 'Jksijh87',1);
+        password varchar(30) NOT NULL,
+        est_administrateur boolean NOT NULL DEFAULT 0
+    );
+
 CREATE TABLE Scores
 (
     id             int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,

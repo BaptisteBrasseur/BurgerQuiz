@@ -9,4 +9,4 @@
 
 <footer>
     <p class="text-center"> BurgerQuizz 2024 - Tous droits réservés.</p>
-</footer><
+</footer>

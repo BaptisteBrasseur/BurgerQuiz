@@ -84,12 +84,9 @@ include "../Includes/header.php";
 
 
     </main>
-
-
-
-
+    <?php
+    include "../Includes/footer.php";
+    ?>
 </body>
-<?php
-include "../Includes/footer.php";
-?>
+
 </html>

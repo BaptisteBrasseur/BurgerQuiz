@@ -1,53 +1,61 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Réservez votre table chez Aux saveurs de chez Thom">
-	<title>back-inscription</title>
-</head>
-<body>
-	
-<h1>Vous êtes sur resevBack.php</h1>
 
-</body>
-</html>
-
-<?php
-// Établir une connexion à la base de données (utilisant MySQLi)
-$servername = "localhost";
-$username = "root";
-$password = "Tangodata!";
-$database = "database";
-
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-// Vérifier la connexion
-if (!$conn) {
-    die("La connexion à la base de données a échoué: " . mysqli_connect_error());
-}
-
-// Récupérer les données du formulaire
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-// Valider et échapper les données (pour la sécurité)
-$username = mysqli_real_escape_string($conn, $username);
-$password = mysqli_real_escape_string($conn, $password);
-
-// Hasher le mot de passe (pour la sécurité)
-$password_hashed = password_hash($password, PASSWORD_DEFAULT);
-
-// Insertion sql
-$sql = "INSERT INTO Utilisateurs(username,password) VALUES ('$username','$password_hashed')";
-
-if (mysqli_query($conn, $sql)) {
-    echo "Enregistrement effectué avec succès.";
-} 
-else {
-    echo "Erreur lors de l'enregistrement des données: " . mysqli_error($conn);
-}
-
-// Fermer la connexion à la base de données
-mysqli_close($conn);
+  <body class="bg-warning text-success"  >
+                                                      - <?php
+                                                         include "../Includes/header.php";
 ?>
+
+<main id="maincontent" role="main" tabindex="-1">
+
+
+
+
+
+    <h1>Inscription à BurgerQuizz</h1>
+
+    <?php
+    // Vérifier si des données POST ont été soumises
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+
+
+
+        // Votre code PHP pour l'inscription ici
+        $dbName = "BurgerQuiz";
+        $dbUser = "root";
+        $dbPassword = "Tangodata!";
+        $dbHost = "Localhost";
+
+        try {
+            $bdd = new PDO("mysql:host=" . $dbHost . ";dbname=" . $dbName, $dbUser, $dbPassword);
+            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Connexion à la base de données réussie";
+        } catch (PDOException $e) {
+            exit("Erreur de connexion : " . $e->getMessage());
+        }
+        $userName = $_POST['username'];
+        $password = $_POST['password'];
+
+        $query = "SELECT * FROM Utilisateurs WHERE username = :username";
+        $statement = $bdd->prepare($query);
+        $statement->bindParam(":username", $userName);
+        $statement->execute();
+        $existingUser = $statement->fetch(PDO::FETCH_ASSOC);
+
+        if ($existingUser)
+        {
+            echo "<p>Un utilisateur avec le même nom d'utilisateur existe déjà. Veuillez choisir un autre nom d'utilisateur.</p>";
+        } else
+        {
+            // Insertion des données dans la base de données
+            $requete = $bdd->prepare("INSERT INTO Utilisateurs(username, password) VALUES (:username, :password)");
+            $requete->bindParam(":username", $userName);
+            $requete->bindParam(":password", $password);
+            $requete->execute();
+
+            echo "<p>Compte créé! Bienvenue chez Burger Quizz</p>";
+        
+    }
+    ?>
+</main>
+
+<?php include "../Includes/footer.php"; ?>
+      </body>
