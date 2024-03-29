@@ -13,19 +13,33 @@ if (empty($_POST['q1']) || empty($_POST['q2']) || empty($_POST['q3']) || empty($
     $reponse8=htmlspecialchars($_POST['q8']);
     $reponse9=htmlspecialchars($_POST['q9']);
     $reponse10=htmlspecialchars($_POST['q10']);
+
     $compteur=0;
     //$compteur=+Question($bonne_reponse,$compteur);
 
     echo "Formulaire correctement envoyé<br>",$reponse1,"<br>",$reponse2,"<br>",$reponse3,"<br>",$reponse4,"<br>",$reponse5,"<br>",$reponse6,"<br>",$reponse7,"<br>",$reponse8,"<br>",$reponse9,"<br>",$reponse10," ";
 }
-function Question(string $_bon, int $_compteur): int
+
+function QuizzVerifyAnswers(string $_userAnswer, string $_correctAnswer) : int
 {
-    $_reponse=trim(fgets(STDIN));
-    $_reponse=strtolower($_reponse);
-    if ($_reponse==$_bon)
+    if ($_userAnswer==$_correctAnswer)
     {
-        $_compteur++;
+        $compteur++;
     }
-    return $_compteur;
+    return $compteur;
 }
+
+$userScore = QuizzVerifyAnswers($reponse1)
+
+
+// function Question(string $_bon, int $_compteur): int
+// {
+//     $_reponse=trim(fgets(STDIN));
+//     $_reponse=strtolower($_reponse);
+//     if ($_reponse==$_bon)
+//     {
+//         $_compteur++;
+//     }
+//     return $_compteur;
+// }
 ?>
