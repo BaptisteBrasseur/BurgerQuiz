@@ -13,12 +13,12 @@
     <h1>Inscription à BurgerQuizz</h1>
 
     <?php
-    // Vérifier si des données POST ont été soumises
+
     if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 
 
-        // Votre code PHP pour l'inscription ici
+
         $dbName = "BurgerQuiz";
         $dbUser = "root";
         $dbPassword = "Tangodata!";

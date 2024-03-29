@@ -23,8 +23,8 @@ include "../Includes/header.php";
         <h1 class="text-center"> The Burger Quizz </h1>
 
             <form action="" method="post">
-                <h2 aria-describedby="explicationqcm">Questions à choix multiples</h2>
-                <p id="explicationqcm"> Choisissez la bonne réponse!</p>
+                <h2 aria-describedby="explicationqcm">Questions : choisissez la bonne réponse</h2>
+
             <fieldset>
                 <legend>Question 1: Quel mangaka a écrit 'Astro Boy'? </legend>
                 <p>

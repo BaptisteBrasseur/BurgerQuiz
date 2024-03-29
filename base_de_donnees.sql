@@ -8,7 +8,7 @@ CREATE TABLE Utilisateurs
         password varchar(30) NOT NULL,
         est_administrateur boolean NOT NULL DEFAULT 0
     );
-
+INSERT INTO Utilisateurs(username, password) values ('test.toto','Toto123');
 CREATE TABLE Scores
 (
     id             int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -16,6 +16,8 @@ CREATE TABLE Scores
     utilisateur_id INT Unsigned NOT NULL,
     CONSTRAINT fk_utilisateur_id FOREIGN KEY (utilisateur_id) REFERENCES Utilisateurs (id)
 );
+INSERT INTO Scores (score,utilisateur_id) values (8,1);
+
 CREATE TABLE Questions_QCM
 (
     id int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
