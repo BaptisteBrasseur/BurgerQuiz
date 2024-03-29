@@ -13,10 +13,27 @@ if (empty($_POST['q1']) || empty($_POST['q2']) || empty($_POST['q3']) || empty($
     $reponse8=htmlspecialchars($_POST['q8']);
     $reponse9=htmlspecialchars($_POST['q9']);
     $reponse10=htmlspecialchars($_POST['q10']);
-
+    $bon1="osamu tezuka";
+    $bon2="un chapeau de paille";
+    $bon3="mappa";
+    $bon4="l'attaque des titans";
+    $bon5="en fille";
+    $bon6="oscar";
+    $bon7="1995";
+    $bon8="uzumaki";
+    $bon9="clamp";
+    $bon10="alchimiste";
     $compteur=0;
-    //$compteur=+Question($bonne_reponse,$compteur);
-
+    $compteur=+QuizzVerifyAnswers($reponse1,$bon1,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse2,$bon2,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse3,$bon3,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse4,$bon4,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse5,$bon5,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse6,$bon6,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse7,$bon7,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse8,$bon8,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse9,$bon9,$compteur);
+    $compteur=+QuizzVerifyAnswers($reponse10,$bon10,$compteur);
     echo "Formulaire correctement envoyé<br>",$reponse1,"<br>",$reponse2,"<br>",$reponse3,"<br>",$reponse4,"<br>",$reponse5,"<br>",$reponse6,"<br>",$reponse7,"<br>",$reponse8,"<br>",$reponse9,"<br>",$reponse10," ";
 }
 
@@ -28,8 +45,7 @@ function QuizzVerifyAnswers(string $_userAnswer, string $_correctAnswer,int $_co
     }
     return $_counter;
 }
-
-
+/*
 $dbName="BurgerQuiz";
 $dbUser="root";
 $dbPassword="Tangodata!";
@@ -39,8 +55,11 @@ try {
     // Connexion à la base de données
     $bdd = new PDO("mysql:host=" . $dbHost . ";dbname=" . $dbName, $dbUser, $dbPassword);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-/*
+}
+catch (PDOException $e)
+{
+    exit("Erreur de connexion : " . $e->getMessage());
+}
     // Préparation de la requête
     $requete = $bdd->prepare("SELECT question.Questions_QCM, question.Questions_reponse_directe FROM  Questions_reponse_directe");
 
@@ -51,10 +70,6 @@ try {
     $resultats = $requete->fetch(PDO::FETCH_ASSOC);
 
     $score1=QuizzVerifyAnswers($reponse1,$resultats["bonne_reponse"],$compteur);*/
-
-    
-
-
 
 
 // function Question(string $_bon, int $_compteur): int

@@ -46,7 +46,7 @@ include "../Includes/header.php";
                     <legend> Question 4: Lequel de ces mangas n'est pas paru dans le 'Weekly Shonen Jump'?</legend>
                     <p>
                         <input type="radio" name="q4" id="q4r1" value="bleach"> <label for="q4r1">Bleach</label>
-                        <input type="radio" name="q4" id="q4r2" value="l attaque des titans"> <label for="q4r2">L'attaque des Titans</label>
+                        <input type="radio" name="q4" id="q4r2" value="l'attaque des titans"> <label for="q4r2">L'attaque des Titans</label>
                         <input type="radio" name="q4" id="q4r3" value="death note"> <label for="q4r3">Death Note</label>
                     </p>
                 </fieldset>
