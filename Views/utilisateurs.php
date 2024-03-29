@@ -13,14 +13,11 @@
 <?php
 include "../Includes/header.php";
 ?>
-
     <main id="maincontent" role="main" tabindex="-1">
         <div class="container">
         <h1 class="text-center"> The Burger Quizz </h1>
-
-            <form action="" method="post">
+            <form action="../Includes/quizz.php" method="post">
                 <h2 aria-describedby="explicationqcm">Questions : choisissez la bonne réponse</h2>
-
             <fieldset>
                 <legend>Question 1: Quel mangaka a écrit 'Astro Boy'? </legend>
                 <p>
@@ -29,7 +26,6 @@ include "../Includes/header.php";
                     <input type="radio" name="q1" id="q1r3" value="go nagai"> <label for="q1r3"> Go Nagai</label>
                 </p>
             </fieldset>
-
                 <fieldset>
                     <legend> Question 2: Que porte Monkey D. Luffy sur sa tête?</legend>
                     <p>
@@ -38,7 +34,6 @@ include "../Includes/header.php";
                         <input type="radio" name="q2" id="q2r3" value="un chapeau de cowboy"> <label for="q2r3"> Un chapeau de cowboy</label>
                     </p>
                 </fieldset>
-
                 <fieldset>
                     <legend> Question 3: Quel studio a adapté en anime 'Chainsaw Man'?</legend>
                     <p>

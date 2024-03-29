@@ -17,7 +17,6 @@ CREATE TABLE Scores
     CONSTRAINT fk_utilisateur_id FOREIGN KEY (utilisateur_id) REFERENCES Utilisateurs (id)
 );
 INSERT INTO Scores (score,utilisateur_id) values (8,1);
-
 CREATE TABLE Questions_QCM
 (
     id int Unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
