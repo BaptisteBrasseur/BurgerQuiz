@@ -34,7 +34,7 @@ if (empty($_POST['q1']) || empty($_POST['q2']) || empty($_POST['q3']) || empty($
     $compteur=+QuizzVerifyAnswers($reponse8,$bon8,$compteur);
     $compteur=+QuizzVerifyAnswers($reponse9,$bon9,$compteur);
     $compteur=+QuizzVerifyAnswers($reponse10,$bon10,$compteur);
-    echo "Formulaire correctement envoyé<br>",$reponse1,"<br>",$reponse2,"<br>",$reponse3,"<br>",$reponse4,"<br>",$reponse5,"<br>",$reponse6,"<br>",$reponse7,"<br>",$reponse8,"<br>",$reponse9,"<br>",$reponse10," ";
+    echo "Formulaire correctement envoyé<br>","Vous avez obtenu","$compteur","bonnes réponses.";
 }
 
 function QuizzVerifyAnswers(string $_userAnswer, string $_correctAnswer,int $_counter) : int
