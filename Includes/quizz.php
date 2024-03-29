@@ -20,16 +20,41 @@ if (empty($_POST['q1']) || empty($_POST['q2']) || empty($_POST['q3']) || empty($
     echo "Formulaire correctement envoyé<br>",$reponse1,"<br>",$reponse2,"<br>",$reponse3,"<br>",$reponse4,"<br>",$reponse5,"<br>",$reponse6,"<br>",$reponse7,"<br>",$reponse8,"<br>",$reponse9,"<br>",$reponse10," ";
 }
 
-function QuizzVerifyAnswers(string $_userAnswer, string $_correctAnswer) : int
+function QuizzVerifyAnswers(string $_userAnswer, string $_correctAnswer,int $_counter) : int
 {
     if ($_userAnswer==$_correctAnswer)
     {
-        $compteur++;
+        $_counter++;
     }
-    return $compteur;
+    return $_counter;
 }
 
-$userScore = QuizzVerifyAnswers($reponse1)
+
+$dbName="BurgerQuiz";
+$dbUser="root";
+$dbPassword="Tangodata!";
+$dbHost="Localhost";
+
+try {
+    // Connexion à la base de données
+    $bdd = new PDO("mysql:host=" . $dbHost . ";dbname=" . $dbName, $dbUser, $dbPassword);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+/*
+    // Préparation de la requête
+    $requete = $bdd->prepare("SELECT question.Questions_QCM, question.Questions_reponse_directe FROM  Questions_reponse_directe");
+
+    // Exécution de la requête
+    $requete->execute();
+
+    // Récupération des résultats sous forme de tableau associatif
+    $resultats = $requete->fetch(PDO::FETCH_ASSOC);
+
+    $score1=QuizzVerifyAnswers($reponse1,$resultats["bonne_reponse"],$compteur);*/
+
+    
+
+
 
 
 // function Question(string $_bon, int $_compteur): int
