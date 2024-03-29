@@ -1,22 +1,25 @@
 <?php
 declare(strict_types=1);
-$compteur=0;
-        $compteur=+Question("Question 1: Quel mangaka a écrit 'Astro Boy'?\nA 'Osamu Tezuka', B 'Akira Toriyama' ou C 'Go Nagai'.\n","a",$compteur);
-        $compteur=+Question("Question 2: Que porte Monkey D. Luffy sur sa tête?\nA 'un chapeau de pirate', B 'un chapeau de paille' ou C 'un chapeau de cowboy'.\n","b",$compteur);
-        $compteur=+Question("Question 3: Quel studio a adapté en anime 'Chainsaw Man'?\nA 'Toei Animation', B 'Studio Pierrot' ou C 'MAPPA'.\n","c",$compteur);
-        $compteur=+Question("Question 4: Lequel de ces mangas n'est pas paru dans le 'Weekly Shonen Jump'?\nA 'Bleach', B 'L'attaque des Titans' ou C 'Death Note'.\n","b",$compteur);
-        $compteur=+Question("Question 5: En quoi se transforme Ranma en touchant de l'eau froide?\nA 'en fille', B 'en panda' ou C 'en écrevisse'.\n","a",$compteur);
-        echo "Maintenant vous devrez directement tapez la bonne réponse.\n";
-        $compteur=+Question("Question 6: Quel est le prénom de l'héroïne de 'La rose de Versailles'?\n","oscar",$compteur);
-        $compteur=+Question("Question 7: En quelle année s'est terminé le manga 'Dragon Ball' en chiffres?\n","1995",$compteur);
-$compteur=+Question("Question 8: Quel est le nom de famille de Naruto?\n","uzumaki",$compteur);
-$compteur=+Question("Question 9: Quel est le collectif derrière 'Sakura chasseuse de cartes'?\n","clamp",$compteur);
-$compteur=+Question("Question 10: Quel est le métier des frères Elric?\n","alchimiste",$compteur);
-echo "Vous avez trouvé ",$compteur," bonne réponses. Bravo!\n";
+if (empty($_POST['q1']) || empty($_POST['q2']) || empty($_POST['q3']) || empty($_POST['q4']) || empty($_POST['q5']) || empty($_POST['q6']) || empty($_POST['q7']) || empty($_POST['q8']) || empty($_POST['q9']) || empty($_POST['q10'])) {
+    echo "Veuillez remplir correctement tous les champs.<br>";
+} else {
+    $reponse1=$_POST['q1'];
+    $reponse2=$_POST['q2'];
+    $reponse3=$_POST['q3'];
+    $reponse4=$_POST['q4'];
+    $reponse5=$_POST['q5'];
+    $reponse6=htmlspecialchars($_POST['q6']);
+    $reponse7=filter_var($_POST['q7'],FILTER_SANITIZE_NUMBER_INT);
+    $reponse8=htmlspecialchars($_POST['q8']);
+    $reponse9=htmlspecialchars($_POST['q9']);
+    $reponse10=htmlspecialchars($_POST['q10']);
+    $compteur=0;
+    //$compteur=+Question($bonne_reponse,$compteur);
 
-function Question(string $_question, string $_bon, int $_compteur): int
+    echo "Formulaire correctement envoyé<br>",$reponse1,"<br>",$reponse2,"<br>",$reponse3,"<br>",$reponse4,"<br>",$reponse5,"<br>",$reponse6,"<br>",$reponse7,"<br>",$reponse8,"<br>",$reponse9,"<br>",$reponse10," ";
+}
+function Question(string $_bon, int $_compteur): int
 {
-    echo $_question;
     $_reponse=trim(fgets(STDIN));
     $_reponse=strtolower($_reponse);
     if ($_reponse==$_bon)

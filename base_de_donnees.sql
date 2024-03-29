@@ -24,10 +24,10 @@ CREATE TABLE Questions_QCM
     mauvaise_reponse_1 varchar(30) NOT NULL,
     mauvaise_reponse_2 varchar(30) NOT NULL
 );
-insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise_reponse_2) values ('Quel mangaka a écrit Astro Boy?', 'Osamu Tezuka', 'Akira Toriyama', 'Go Nagai');
+insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise_reponse_2) values ('Quel mangaka a écrit Astro Boy?', 'osamu tezuka', 'akira toriyama', 'go nagai');
 insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise_reponse_2) values ('Que porte Monkey D. Luffy sur sa tête?', 'un chapeau de paille', 'un chapeau de pirate', 'un chapeau de cowboy');
-insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise_reponse_2) values ('Quel studio a adapté en anime Chainsaw Man?', 'MAPPA', 'Toei Animation', 'Studio Pierrot');
-insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise_reponse_2) values ('Lequel de ces mangas n est pas paru dans le Weekly Shonen Jump?', 'L attaque des Titans', 'Bleach', 'Death Note');
+insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise_reponse_2) values ('Quel studio a adapté en anime Chainsaw Man?', 'mappa', 'toei animation', 'studio pierrot');
+insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise_reponse_2) values ('Lequel de ces mangas n est pas paru dans le Weekly Shonen Jump?', 'l attaque des titans', 'bleach', 'death note');
 insert into Questions_QCM (question, bonne_reponse, mauvaise_reponse_1, mauvaise_reponse_2) values ('En quoi se transforme Ranma en touchant de l eau froide?', 'en fille', 'en panda', 'en écrevisse');
 CREATE TABLE Questions_reponse_directe
 (
