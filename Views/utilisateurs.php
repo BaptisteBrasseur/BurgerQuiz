@@ -69,7 +69,7 @@ include "../Includes/header.php";
                     <legend>
                         <label for="q7"> Question 7: En quelle année s'est terminé le manga 'Dragon Ball'( en chiffres)?</label>
                     </legend>
-                    <input type="text" id="q7" name=q7"" required>
+                    <input type="text" id="q7" name="q7" required>
                 </fieldset>
                 <fieldset>
                 <legend>
